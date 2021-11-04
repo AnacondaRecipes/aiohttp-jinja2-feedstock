@@ -33,7 +33,7 @@ test:
     - pip
     - python <3.10
   commands:
-    -pip check
+    - pip check
 
 about:
   home: https://github.com/aio-libs/aiohttp-jinja2/
