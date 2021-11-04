@@ -41,6 +41,7 @@ about:
   license_family: APACHE
   license_file: LICENSE
   summary: jinja2 template renderer for aiohttp.web (http server for asyncio)
+  dev_url: https://github.com/aio-libs/aiohttp-jinja2/
   doc_url: http://aiohttp-jinja2.readthedocs.org/
 
 extra:
