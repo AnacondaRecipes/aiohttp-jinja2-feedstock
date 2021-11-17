@@ -12,19 +12,20 @@ source:
 build:
   number: 0
   noarch: python
-  skip: True  # [py<35]
+  skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
-    - aiohttp >=3.2.0
-    - jinja2 >=2.10.1
     - pip
     - python
+    - setuptools
+    - wheel
   run:
-    - aiohttp >=3.2.0
-    - jinja2 >=2.10.1
-    - python >3.5.3
+    - aiohttp >=3.6.3
+    - jinja2 >=3.0.0
+    - python >3.5
+    - typing_extensions>=3.7.4  # [py<38]
 
 test:
   imports:
@@ -37,7 +38,7 @@ test:
 
 about:
   home: https://github.com/aio-libs/aiohttp-jinja2/
-  license: Apache Software
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: jinja2 template renderer for aiohttp.web (http server for asyncio)
