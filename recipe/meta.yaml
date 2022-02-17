@@ -12,7 +12,6 @@ source:
 build:
   number: 0
   noarch: python
-  skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
@@ -32,7 +31,7 @@ test:
     - aiohttp_jinja2
   requires:
     - pip
-    - python <3.10
+    - python
   commands:
     - pip check
 
@@ -43,7 +42,7 @@ about:
   license_file: LICENSE
   summary: jinja2 template renderer for aiohttp.web (http server for asyncio)
   dev_url: https://github.com/aio-libs/aiohttp-jinja2/
-  doc_url: http://aiohttp-jinja2.readthedocs.org/
+  doc_url: https://aiohttp-jinja2.readthedocs.org/
 
 extra:
   recipe-maintainers:
